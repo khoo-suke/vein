@@ -1,12 +1,12 @@
-import { getNewsList, type NewsItem } from './_lib/microcms';
+import { getNewsList, type NewsItem } from '../_lib/microcms';
 import Link from 'next/link';
 
-export default async function Page() {
+export default async function NewsListPage() {
   const newsList: NewsItem[] = await getNewsList();
 
   return (
     <div style={{ padding: '1rem' }}>
-      <h1>トップページ</h1>
+      <h1>お知らせ一覧</h1>
       <ul>
         {newsList.map((news) => {
           const formattedDate = new Date(news.publishedAt).toLocaleDateString('ja-JP', {
