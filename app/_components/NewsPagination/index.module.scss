@@ -1,0 +1,52 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.pagination li {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #c1d5ca;
+  border-radius: 4px;
+}
+
+.pagination li:hover {
+  background: #c1d5ca;
+}
+
+.active {
+  background: #97b4a5;
+  color: white;
+  border: 1px solid #7c9889;
+}
+
+.newsList {
+  list-style: none;
+  min-height: 317px;
+  padding: 0;
+  margin-bottom: 60px;
+  li {
+    border-bottom: 1px solid #c1d5ca;
+    padding: 0 1em 12px;
+    margin-bottom: 2em;
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      .title {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 4px;
+      }
+      .date {
+        font-size: 0.8rem;
+        color: #666;
+        margin-right: 4em;
+      }
+    }
+  }
+}

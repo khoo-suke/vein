@@ -1,10 +1,24 @@
-import Link from 'next/link';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./index.module.scss";
 
 export default function Header() {
   return (
-    <header style={{ padding: '1rem', borderBottom: '1px solid #ccc' }}>
+    <header className={styles.header}>
+      <Link href="/">
+        <Image
+          src="/logo_vein.png"
+          alt="Vein Logo"
+          width={151}
+          height={49}
+          priority
+        />
+      </Link>
       <nav>
-        <Link href="/">Home</Link> | <Link href="/info">お知らせ</Link>
+        <Link href="/">HOME</Link>
+        <Link href="/">BOOKING</Link>
+        <Link href="/info">INFO</Link>
       </nav>
     </header>
   );
