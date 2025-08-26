@@ -10,7 +10,7 @@ type Props = {
   itemsPerPage?: number;
 };
 
-function NewsPagination({ newsList, itemsPerPage = 5 }: Props) {
+export const NewsPagination = ({ newsList, itemsPerPage = 5 }: Props) => {
   const [itemOffset, setItemOffset] = useState(0);
 
   const endOffset = itemOffset + itemsPerPage;
@@ -59,6 +59,4 @@ function NewsPagination({ newsList, itemsPerPage = 5 }: Props) {
       />
     </>
   );
-}
-
-export default NewsPagination;
+};
