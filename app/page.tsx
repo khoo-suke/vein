@@ -1,5 +1,6 @@
-import CustomButton from "@/app/_components/Button";
-import NewsPagination from "@/app/_components/NewsPagination";
+import { CustomButton } from "@/app/_components/Button";
+import { NewsPagination } from "@/app/_components/NewsPagination";
+import { ShopInfoMap } from "@/app/_components/ShopInfoMap";
 import { getNewsList, type NewsItem } from "@/app/_lib/microcms";
 import Image from "next/image";
 import styles from "./page.module.css";
@@ -45,48 +46,79 @@ export default async function Page() {
               </li>
               <li>
                 <span>
-                  <em>30</em>分
+                  <em>60</em>分
                 </span>
                 <span>
-                  <em>3,300</em>円(税込)
-                </span>
-              </li>
-              <li>
-                <span>
-                  <em>30</em>分
-                </span>
-                <span>
-                  <em>3,300</em>円(税込)
+                  <em>6,600</em>円(税込)
                 </span>
               </li>
               <li>
                 <span>
-                  <em>30</em>分
+                  <em>90</em>分
                 </span>
                 <span>
-                  <em>3,300</em>円(税込)
+                  <em>9,900</em>円(税込)
+                </span>
+              </li>
+              <li>
+                <span>
+                  <em>120</em>分
+                </span>
+                <span>
+                  <em>13,200</em>円(税込)
                 </span>
               </li>
             </ul>
           </div>
+
           <div className={styles.menuSubItem}>
             <div className={styles.menuItem}>
-              <h3>ボディケア</h3>
+              <h3>フットケア</h3>
               <ul>
                 <li>
                   <span>
                     <em>30</em>分
                   </span>
                   <span>
-                    <em>3,300</em>円(税込)
+                    <em>3,800</em>円(税込)
                   </span>
                 </li>
                 <li>
                   <span>
-                    <em>30</em>分
+                    <em>40</em>分
                   </span>
                   <span>
-                    <em>3,300</em>円(税込)
+                    <em>4,900</em>円(税込)
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <em>60</em>分
+                  </span>
+                  <span>
+                    <em>7,100</em>円(税込)
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.menuItem}>
+              <h3>アイヘッドケア</h3>
+              <ul>
+                <li>
+                  <span>
+                    <em>10</em>分
+                  </span>
+                  <span>
+                    <em>1,100</em>円(税込)
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <em>20</em>分
+                  </span>
+                  <span>
+                    <em>2,200</em>円(税込)
                   </span>
                 </li>
                 <li>
@@ -99,23 +131,16 @@ export default async function Page() {
                 </li>
               </ul>
             </div>
+
             <div className={styles.menuItem}>
-              <h3>ボディケア</h3>
+              <h3>ハンドケア</h3>
               <ul>
                 <li>
                   <span>
-                    <em>30</em>分
+                    <em>20</em>分
                   </span>
                   <span>
-                    <em>3,300</em>円(税込)
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <em>30</em>分
-                  </span>
-                  <span>
-                    <em>3,300</em>円(税込)
+                    <em>2,200</em>円(税込)
                   </span>
                 </li>
                 <li>
@@ -128,60 +153,24 @@ export default async function Page() {
                 </li>
               </ul>
             </div>
+
             <div className={styles.menuItem}>
-              <h3>ボディケア</h3>
+              <h3>腸ケア</h3>
               <ul>
                 <li>
                   <span>
-                    <em>30</em>分
+                    <em>10</em>分
                   </span>
                   <span>
-                    <em>3,300</em>円(税込)
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <em>30</em>分
-                  </span>
-                  <span>
-                    <em>3,300</em>円(税込)
+                    <em>1,100</em>円(税込)
                   </span>
                 </li>
                 <li>
                   <span>
-                    <em>30</em>分
+                    <em>20</em>分
                   </span>
                   <span>
-                    <em>3,300</em>円(税込)
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className={styles.menuItem}>
-              <h3>ボディケア</h3>
-              <ul>
-                <li>
-                  <span>
-                    <em>30</em>分
-                  </span>
-                  <span>
-                    <em>3,300</em>円(税込)
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <em>30</em>分
-                  </span>
-                  <span>
-                    <em>3,300</em>円(税込)
-                  </span>
-                </li>
-                <li>
-                  <span>
-                    <em>30</em>分
-                  </span>
-                  <span>
-                    <em>3,300</em>円(税込)
+                    <em>2,200</em>円(税込)
                   </span>
                 </li>
               </ul>
@@ -200,6 +189,8 @@ export default async function Page() {
           <NewsPagination newsList={newsList} itemsPerPage={5} />
         </div>
       </div>
+
+      <ShopInfoMap />
     </div>
   );
 }
