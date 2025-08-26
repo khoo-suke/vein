@@ -1,0 +1,25 @@
+.footer {
+  background-color: #86a38f;
+  color: #fff;
+  .inner {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    padding: 100px 0;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 92%;
+    nav {
+      border-left: 1px solid #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-left: 60px;
+    }
+  }
+  small {
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}

@@ -1,6 +1,6 @@
+import NewsPagination from "@/app/_components/NewsPagination";
+import { getNewsList, type NewsItem } from "@/app/_lib/microcms";
 import Image from "next/image";
-import NewsPagination from "./_components/NewsPagination";
-import { getNewsList, type NewsItem } from "./_lib/microcms";
 import styles from "./page.module.css";
 
 export default async function Page() {

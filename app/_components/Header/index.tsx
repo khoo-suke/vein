@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.scss";
 
-export default function Header() {
+function Header() {
   return (
     <header className={styles.header}>
       <Link href="/">
@@ -23,3 +23,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;
