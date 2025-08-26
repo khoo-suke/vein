@@ -63,7 +63,7 @@
 }
 
 .first {
-  padding: 100px 0 160px;
+  padding: 140px 0 200px;
   h2 {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -72,17 +72,17 @@
   }
   .description {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 100px;
   }
 }
 
 .menu {
   background-color: #e6f0eb;
-  padding: 20px 0 150px;
+  padding: 20px 0 200px;
   .note {
     background-color: #fff;
     padding: 70px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
     max-width: 800px;
     width: 90%;
     .menuFirstItem {
@@ -153,5 +153,5 @@
 }
 
 .info {
-  padding: 20px 0 150px;
+  padding: 20px 0 200px;
 }

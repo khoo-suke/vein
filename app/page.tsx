@@ -1,3 +1,4 @@
+import CustomButton from "@/app/_components/Button";
 import NewsPagination from "@/app/_components/NewsPagination";
 import { getNewsList, type NewsItem } from "@/app/_lib/microcms";
 import Image from "next/image";
@@ -22,6 +23,7 @@ export default async function Page() {
           <br />
           お客様のリラックスと健康を最優先に考え、心地よい空間で癒しのひとときをお過ごしいただけます。
         </p>
+        <CustomButton text="ご予約はこちら" />
       </div>
 
       <div className={styles.menu}>
@@ -186,6 +188,7 @@ export default async function Page() {
             </div>
           </div>
         </div>
+        <CustomButton text="ご予約はこちら" />
       </div>
 
       <div className={styles.info}>
