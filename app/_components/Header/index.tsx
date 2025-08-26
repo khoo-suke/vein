@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.scss";
 
-function Header() {
+export const Header = () => {
   return (
     <header className={styles.header}>
       <Link href="/">
@@ -17,11 +17,25 @@ function Header() {
       </Link>
       <nav>
         <Link href="/">HOME</Link>
-        <Link href="/">BOOKING</Link>
+        <a
+          href="https://reserva.be/vein"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BOOKING
+        </a>
         <Link href="/info">INFO</Link>
+        <Link href="/">CONTACT</Link>
+        <Link href="/">
+          <Image
+            src="/instagram_white.svg"
+            alt="instagram"
+            width={20}
+            height={20}
+            priority
+          />
+        </Link>
       </nav>
     </header>
   );
-}
-
-export default Header;
+};

@@ -1,5 +1,5 @@
-import Footer from "@/app/_components/Footer";
-import Header from "@/app/_components/Header";
+import { Footer } from "@/app/_components/Footer";
+import { Header } from "@/app/_components/Header";
 import "./globals.css";
 
 export const metadata = {
