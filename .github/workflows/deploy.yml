@@ -1,20 +1,41 @@
-name: FTP Upload Test
+name: MicroCMS Auto Build & FTP Upload
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:       # 手動トリガー
+  repository_dispatch:
+    types: [update]       # Webhook から trigger
+  schedule:
+    - cron: "0 * * * *"   # 毎時0分にビルド（オプション）
 
 jobs:
-  test-ftp:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
+      # 1. リポジトリをチェックアウト
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # 2. Node.js セットアップ
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # 3. 依存関係インストール
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. プロジェクトビルド
+      - name: Build project
+        run: npm run build
+
+      # 5. FTP アップロード
       - name: FTP Upload
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: out
-          server-dir: /vein
+          local-dir: out          # npm run build で生成されるフォルダ
+          server-dir: /vein       # アップロード先ディレクトリ
