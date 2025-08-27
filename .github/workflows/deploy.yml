@@ -2,7 +2,8 @@ name: MicroCMS Auto Build & FTP Upload
 
 on:
   workflow_dispatch: # 手動トリガー用
-  repository_dispatch: # Webhook から trigger
+  repository_dispatch:
+    types: [update] # Webhook から trigger
   schedule:
     - cron: "0 * * * *" # 毎時0分にビルド（オプション）
 
