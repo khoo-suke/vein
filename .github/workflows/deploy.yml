@@ -1,17 +1,19 @@
 name: MicroCMS Auto Build & FTP Upload
 
 on:
-  workflow_dispatch: # 手動トリガー用
+  workflow_dispatch:
   repository_dispatch:
-    types: [update] # Webhook から trigger
+    types: [update]
   schedule:
-    - cron: "0 * * * *" # 毎時0分にビルド（オプション）
+    - cron: "0 * * * *"
 
 jobs:
   test-ftp:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: FTP Upload Test
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
