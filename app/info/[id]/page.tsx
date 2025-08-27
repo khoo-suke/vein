@@ -16,12 +16,10 @@ export default async function NewsDetailPage({ params }: Props) {
     weekday: "short",
   });
 
-  const contentText = news.content.replace(/<[^>]*>/g, "");
-
   return (
     <div style={{ padding: "1rem" }}>
       <h1>{news.title}</h1>
-      <p>{contentText}</p>
+      <div dangerouslySetInnerHTML={{ __html: news.content }} />
       <p>{formattedDate}</p>
     </div>
   );
