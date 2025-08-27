@@ -11,7 +11,12 @@ export default async function Page() {
   return (
     <div>
       <h1 className={styles.fv}>
-        <Image src="/fv.png" alt="VEIN" width={1200} height={650} />
+        <Image
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/fv.png`}
+          alt="VEIN"
+          width={1200}
+          height={650}
+        />
       </h1>
       <div className={styles.first}>
         <h2>
