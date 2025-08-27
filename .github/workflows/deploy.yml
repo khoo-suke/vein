@@ -8,32 +8,15 @@ on:
     - cron: "0 * * * *" # 毎時0分にビルド（オプション）
 
 jobs:
-  build-and-deploy:
+  test-ftp:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: |
-          npm run build
-
-      - name: FTP Upload
+      - uses: actions/checkout@v3
+      - name: FTP Upload Test
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          host: ${{ secrets.FTP_HOST }}
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
           local-dir: out
-          remote-dir: /vein
-          git-ftp-args: --insecure
+          server-dir: /vein
