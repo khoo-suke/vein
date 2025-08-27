@@ -1,11 +1,7 @@
-name: MicroCMS Auto Build & FTP Upload
+name: FTP Upload Test
 
 on:
   workflow_dispatch:
-  repository_dispatch:
-    types: [update]
-  schedule:
-    - cron: "0 * * * *"
 
 jobs:
   test-ftp:
@@ -14,7 +10,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: FTP Upload Test
+      - name: FTP Upload
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.FTP_HOST }}
