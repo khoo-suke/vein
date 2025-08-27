@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className={styles.inner}>
         <Link href="/">
           <Image
-            src="/logo_white.png"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo_white.png`}
             alt="Vein Logo"
             width={275}
             height={88}
@@ -29,7 +29,7 @@ export const Footer = () => {
           <Link href="/">CONTACT</Link>
           <Link href="/">
             <Image
-              src="/instagram_black.svg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/instagram_black.svg`}
               alt="instagram"
               width={20}
               height={20}

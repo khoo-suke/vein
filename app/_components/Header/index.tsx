@@ -8,7 +8,7 @@ export const Header = () => {
     <header className={styles.header}>
       <Link href="/">
         <Image
-          src="/logo_vein.png"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo_vein.png`}
           alt="Vein Logo"
           width={151}
           height={49}
@@ -28,7 +28,7 @@ export const Header = () => {
         <Link href="/">CONTACT</Link>
         <Link href="/">
           <Image
-            src="/instagram_white.svg"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/instagram_white.svg`}
             alt="instagram"
             width={20}
             height={20}

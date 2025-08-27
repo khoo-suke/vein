@@ -1,4 +1,4 @@
-import { getNewsItem, type NewsItem } from "../../_lib/microcms";
+import { getNewsItem, getNewsList, type NewsItem } from "../../_lib/microcms";
 
 type Props = { params: { id: string } };
 
@@ -25,4 +25,12 @@ export default async function NewsDetailPage({ params }: Props) {
       <p>{formattedDate}</p>
     </div>
   );
+}
+
+// 動的ルートを静的生成するために必要
+export async function generateStaticParams() {
+  const newsList = await getNewsList();
+  return newsList.map((item) => ({
+    id: item.id,
+  }));
 }
