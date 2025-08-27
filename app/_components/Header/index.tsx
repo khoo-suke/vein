@@ -26,7 +26,11 @@ export const Header = () => {
         </a>
         <Link href="/info">INFO</Link>
         <Link href="/">CONTACT</Link>
-        <Link href="/">
+        <a
+          href="https://www.instagram.com/vein__relaxation"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             src={`${process.env.NEXT_PUBLIC_BASE_PATH}/instagram_white.svg`}
             alt="instagram"
@@ -34,7 +38,7 @@ export const Header = () => {
             height={20}
             priority
           />
-        </Link>
+        </a>
       </nav>
     </header>
   );
