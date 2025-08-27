@@ -26,15 +26,14 @@ jobs:
       - name: Build project
         run: |
           npm run build
-          npm run export
 
       - name: FTP Upload
-        uses: appleboy/ftp-action@v0.3.0
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           host: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           local-dir: out
-          remote-dir: /vein # レンタルサーバーの公開ディレクトリ
+          remote-dir: /vein
           git-ftp-args: --insecure
