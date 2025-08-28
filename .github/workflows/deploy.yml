@@ -7,18 +7,21 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      #1 リポジトリのソースコードをチェックアウト
+      # リポジトリのソースコードをチェックアウト
       - name: Checkout repository
         uses: actions/checkout@v4
-      #2 Node.js のセットアップ
+      # Node.js のセットアップ
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      #3 依存関係のインストール
+      # 依存関係のインストール
       - name: Install dependencies
         run: npm ci
-      #4 Next.js のビルド
+      # Next.js のキャッシュをクリア
+      - name: Clear Next.js cache
+        run: rm -rf .next
+      # Next.js のビルド
       - name: Build Next.js
         run: npm run build
         env:
@@ -26,7 +29,7 @@ jobs:
           MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
           NEXT_PUBLIC_GOOGLE_MAP_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY }}
           NEXT_PUBLIC_MAP_ID: ${{ secrets.NEXT_PUBLIC_MAP_ID }}
-      #5 FTPでレンタルサーバーにデプロイ
+      # FTPでレンタルサーバーにデプロイ
       - name: FTP Upload
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
