@@ -1,0 +1,9 @@
+name: simple test
+on:
+  workflow_dispatch: # 手動トリガー用
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, world!"
