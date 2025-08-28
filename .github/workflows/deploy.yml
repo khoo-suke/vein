@@ -3,6 +3,9 @@ on:
   workflow_dispatch: # 手動トリガー用
   repository_dispatch:
     types: [update] # Webhook から trigger
+  push:
+    branches:
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
