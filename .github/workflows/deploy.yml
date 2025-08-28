@@ -40,6 +40,6 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          local-path: ./out/
-          remote-path: /vein/ # レンタルサーバーの公開ディレクトリ
+          LOCAL_DIR: ./out
+          REMOTE_DIR: /vein # レンタルサーバーの公開ディレクトリ
           delete: true
