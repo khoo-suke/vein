@@ -42,4 +42,4 @@ jobs:
           port: 21
           local-dir: ./out/
           remote-dir: ./vein/ # レンタルサーバーの公開ディレクトリ
-          options: --delete
+          delete: true
