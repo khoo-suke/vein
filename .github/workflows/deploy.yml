@@ -42,4 +42,4 @@ jobs:
           port: 21
           local-dir: ./out/
           server-dir: /vein　# レンタルサーバーの公開ディレクトリ
-          dangerous-clean-slate: true
+          delete: true
