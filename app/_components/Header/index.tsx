@@ -25,7 +25,7 @@ export const Header = () => {
           BOOKING
         </a>
         <Link href="/info">INFO</Link>
-        <Link href="/">CONTACT</Link>
+        <Link href="/contact">CONTACT</Link>
         <a
           href="https://www.instagram.com/vein__relaxation"
           target="_blank"
