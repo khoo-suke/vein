@@ -11,7 +11,7 @@ const API_KEY = process.env.MICROCMS_API_KEY!;
 export const getNewsList = async (): Promise<NewsItem[]> => {
   const res = await fetch(API_URL, {
     headers: { "X-MICROCMS-API-KEY": API_KEY },
-    cache: "force-cache",
+    cache: "no-store",
   });
 
   if (!res.ok) {
@@ -26,7 +26,7 @@ export const getNewsList = async (): Promise<NewsItem[]> => {
 export const getNewsItem = async (id: string): Promise<NewsItem> => {
   const res = await fetch(`${API_URL}/${id}`, {
     headers: { "X-MICROCMS-API-KEY": API_KEY },
-    cache: "force-cache",
+    cache: "no-store",
   });
 
   if (!res.ok) {
