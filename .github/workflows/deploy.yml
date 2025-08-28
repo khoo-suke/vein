@@ -30,7 +30,7 @@ jobs:
 
       #5 FTPでレンタルサーバーにデプロイ
       - name: FTP Upload
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        uses: SamKirkland/FTP-Deploy-Action@4.3.4
         with:
           host: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
