@@ -40,6 +40,6 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          LOCAL_DIR: ./out
-          REMOTE_DIR: vein/ # レンタルサーバーの公開ディレクトリ
-          delete: true
+          local_dir: ./out
+          remote_dir: http://kho-portfolio.main.jp/vein/ # レンタルサーバーの公開ディレクトリ
+          dangerous-clean-slate: true
