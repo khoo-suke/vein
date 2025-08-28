@@ -3,31 +3,25 @@ on:
   workflow_dispatch: # 手動トリガー用
   repository_dispatch:
     types: [update] # Webhook から trigger
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
       #1 リポジトリのソースコードをチェックアウト
       - name: Checkout repository
         uses: actions/checkout@v4
-
       #2 Node.js のセットアップ
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
       #3 依存関係のインストール
       - name: Install dependencies
         run: npm ci
-
       #4 Next.js のビルド
       - name: Build Next.js
         run: |
           npm run build
-
       #5 FTPでレンタルサーバーにデプロイ
       - name: FTP Upload
         uses: SamKirkland/FTP-Deploy-Action@4.3.4
