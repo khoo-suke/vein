@@ -5,17 +5,15 @@
   padding: 0;
   gap: 8px;
   margin-top: 20px;
-}
-
-.pagination li {
-  cursor: pointer;
-  padding: 6px 12px;
-  border: 1px solid #c1d5ca;
-  border-radius: 4px;
-}
-
-.pagination li:hover {
-  background: #c1d5ca;
+  li {
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 1px solid #c1d5ca;
+    border-radius: 4px;
+    &:hover {
+      background: #c1d5ca;
+    }
+  }
 }
 
 .active {
@@ -23,7 +21,6 @@
   color: white;
   border: 1px solid #7c9889;
 }
-
 .newsList {
   list-style: none;
   min-height: 317px;
