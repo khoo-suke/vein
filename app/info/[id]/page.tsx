@@ -1,4 +1,5 @@
 import { getNewsItem, getNewsList, type NewsItem } from "../../_lib/microcms";
+import styles from "../page.module.scss";
 
 type Props = { params: { id: string } };
 
@@ -17,8 +18,8 @@ export default async function NewsDetailPage({ params }: Props) {
   });
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <h1>{news.title}</h1>
+    <div className={styles.container}>
+      <h1 className={styles.infoCaption}>{news.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: news.content }} />
       <p>{formattedDate}</p>
     </div>

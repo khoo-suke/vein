@@ -1,0 +1,36 @@
+.container {
+  width: min(92%, 800px);
+  margin: 0 auto 120px;
+  .caption {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 100px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 2px;
+      background-color: #c1d5ca;
+      border-radius: 2px;
+    }
+  }
+  ul {
+    li {
+      border-bottom: 1px solid #c1d5ca;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+  }
+  .infoCaption {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}

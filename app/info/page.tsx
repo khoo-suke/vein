@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { getNewsList, type NewsItem } from "../_lib/microcms";
+import styles from "./page.module.scss";
 
 export default async function NewsListPage() {
   const newsList: NewsItem[] = await getNewsList();
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <h1>お知らせ一覧</h1>
+    <div className={styles.container}>
+      <h1 className={styles.caption}>お知らせ一覧</h1>
       <ul>
         {newsList.map((news) => {
           const formattedDate = new Date(news.publishedAt).toLocaleDateString(
@@ -20,7 +21,7 @@ export default async function NewsListPage() {
           );
 
           return (
-            <li key={news.id} style={{ marginBottom: "0.5rem" }}>
+            <li key={news.id}>
               <span style={{ marginRight: "0.5rem", color: "#888" }}>
                 {formattedDate}
               </span>
