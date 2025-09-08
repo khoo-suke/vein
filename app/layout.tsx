@@ -1,6 +1,6 @@
 import { Footer } from "@/app/_components/Footer";
 import { Header } from "@/app/_components/Header";
-import "./globals.css";
+import "./globals.scss";
 
 export const metadata = {
   title: " | 平井駅から徒歩4分 | リラクゼーションサロン",

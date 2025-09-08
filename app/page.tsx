@@ -3,7 +3,7 @@ import { NewsPagination } from "@/app/_components/NewsPagination";
 import { ShopInfoMap } from "@/app/_components/ShopInfoMap";
 import { getNewsList, type NewsItem } from "@/app/_lib/microcms";
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 export default async function Page() {
   const newsList: NewsItem[] = await getNewsList();

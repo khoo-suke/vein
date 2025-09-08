@@ -1,3 +1,5 @@
+@use "../../_mixins" as *;
+
 .button {
   background-color: #fff;
   border: 1px solid #333;
@@ -8,8 +10,10 @@
   padding: 16px;
   position: relative;
   margin: 0 auto;
-  max-width: 80%;
-  width: 375px;
+  width: min(80%, 375px);
+  @include media(md) {
+    padding: 8px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -20,6 +24,9 @@
     border-top: 1px solid #333;
     transform: translateY(-50%) rotate(45deg);
     transition: right 0.4s ease;
+    @include media(md) {
+      content: none;
+    }
   }
   &::after {
     content: "";
@@ -30,6 +37,9 @@
     top: 50%;
     right: -60px;
     transition: right 0.4s ease;
+    @include media(md) {
+      content: none;
+    }
   }
   &:hover {
     opacity: 0.7;

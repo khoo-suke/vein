@@ -1,3 +1,5 @@
+@use "../../_mixins" as *;
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -33,16 +35,25 @@
     a {
       text-decoration: none;
       color: inherit;
-      display: block;
+      display: flex;
+      @include media(md) {
+        flex-wrap: wrap;
+      }
       .title {
         font-weight: bold;
         font-size: 1rem;
         margin-bottom: 4px;
+        @include media(md) {
+          width: 100%;
+        }
       }
       .date {
         font-size: 0.8rem;
         color: #666;
         margin-right: 4em;
+        @include media(md) {
+          width: 100%;
+        }
       }
     }
   }

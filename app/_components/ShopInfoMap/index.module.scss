@@ -1,6 +1,14 @@
+@use "../../_mixins" as *;
+
 .map {
   height: 400px;
-  max-width: 600px;
-  width: 90%;
+  width: min(90%, 600px);
   margin: 0 auto 200px;
+  @include media(md) {
+    margin: 0 auto 40px;
+  }
+  iframe {
+    height: 300px;
+    width: 100%;
+  }
 }
