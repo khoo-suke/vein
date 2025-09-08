@@ -39,7 +39,7 @@ export const NewsPagination = ({ newsList, itemsPerPage = 5 }: Props) => {
             <li key={news.id}>
               <Link href={`/info/${news.id}`}>
                 <span className={styles.date}>{formattedDate}</span>
-                {news.title}
+                <h2>{news.title}</h2>
               </Link>
             </li>
           );
