@@ -8,13 +8,16 @@ export const Header = () => {
     <header className={styles.header}>
       <div className={styles.headerInner}>
         <Link href="/">
-          <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo_vein.svg`}
-            alt="Vein Logo"
-            width={151}
-            height={49}
-            priority
-          />
+          {/* eslint-disable @next/next/no-img-element */}
+          <Link href="/">
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo_vein.svg`}
+              alt="Vein Logo"
+              width={151}
+              height={49}
+            />
+          </Link>
+          {/* eslint-enable @next/next/no-img-element */}
         </Link>
         <nav>
           <Link href="/">HOME</Link>
