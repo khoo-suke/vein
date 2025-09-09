@@ -13,6 +13,7 @@
   width: min(80%, 375px);
   @include media(md) {
     padding: 8px;
+    width: 75%;
   }
   &::before {
     content: "";
