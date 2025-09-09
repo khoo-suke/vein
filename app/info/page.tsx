@@ -7,7 +7,7 @@ export default async function NewsListPage() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.caption}>お知らせ一覧</h1>
+      <h2 className={styles.caption}>お知らせ一覧</h2>
       <NewsPagination newsList={newsList} itemsPerPage={8} />
     </div>
   );
