@@ -5,11 +5,14 @@
     color: #fff;
     width: min(92%, 1200px);
     margin: 0 auto;
-  }
-  .subPageCaption {
-    font-size: 80px;
-    letter-spacing: 0.1em;
-    line-height: 1.4;
+    .subPageCaption {
+      font-size: 80px;
+      letter-spacing: 0.1em;
+      line-height: 1.4;
+    }
+    span {
+      font-size: 120%;
+    }
   }
 }
 
