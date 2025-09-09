@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getNewsItem, getNewsList, type NewsItem } from "../../_lib/microcms";
 import styles from "../page.module.scss";
 
@@ -20,8 +21,14 @@ export default async function NewsDetailPage({ params }: Props) {
   return (
     <div className={styles.container}>
       <h1 className={styles.infoCaption}>{news.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: news.content }} />
-      <p>{formattedDate}</p>
+      <p className={styles.date}>{formattedDate}</p>
+      <div
+        className={styles.contents}
+        dangerouslySetInnerHTML={{ __html: news.content }}
+      />
+      <Link href="/info" className={styles.backLink}>
+        &lt; お知らせ一覧に戻る
+      </Link>
     </div>
   );
 }

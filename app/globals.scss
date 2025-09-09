@@ -1,9 +1,4 @@
 html,
-body {
-  overflow-x: hidden;
-}
-
-html,
 body,
 div,
 span,
@@ -116,6 +111,11 @@ body {
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.08em;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 menu,
