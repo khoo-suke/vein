@@ -1,15 +1,19 @@
 .subPageCaptionArea {
   background-color: #c1d5ca;
   padding: 80px 20px 120px;
+  margin-top: 89px;
   .inner {
     color: #fff;
     width: min(92%, 1200px);
     margin: 0 auto;
-  }
-  .subPageCaption {
-    font-size: 80px;
-    letter-spacing: 0.1em;
-    line-height: 1.4;
+    .subPageCaption {
+      font-size: 80px;
+      letter-spacing: 0.1em;
+      line-height: 1.4;
+    }
+    span {
+      font-size: 120%;
+    }
   }
 }
 
