@@ -9,7 +9,7 @@ export const Header = () => {
       <div className={styles.headerInner}>
         <Link href="/">
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo_vein.png`}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/logo_vein.svg`}
             alt="Vein Logo"
             width={151}
             height={49}
