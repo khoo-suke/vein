@@ -17,6 +17,9 @@
     }
     .footerLogo {
       margin-bottom: 20px;
+      @include media(md) {
+        width: 50%;
+      }
     }
     .tel {
       display: flex;

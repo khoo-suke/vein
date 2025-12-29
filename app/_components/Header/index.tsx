@@ -81,7 +81,7 @@ export const Header = () => {
         {isMobile && (
           <>
             <IconButton onClick={() => setOpen(true)}>
-              <MenuIcon sx={{ color: "#333" }} />
+              <MenuIcon sx={{ color: "#444" }} />
             </IconButton>
             <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
               <div style={{ width: 250, padding: 16 }}>
@@ -100,6 +100,7 @@ export const Header = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{
+                            color: "#444",
                             display: "flex",
                             alignItems: "center",
                             gap: 8,

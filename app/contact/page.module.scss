@@ -1,3 +1,5 @@
+@use "../_mixins" as *;
+
 .subPageCaptionArea {
   background-color: #c1d5ca;
   padding: 80px 20px 120px;
@@ -10,6 +12,9 @@
       font-size: 80px;
       letter-spacing: 0.1em;
       line-height: 1.4;
+      @include media(md) {
+        font-size: 40px;
+      }
     }
     span {
       font-size: 120%;
@@ -27,6 +32,9 @@
     text-align: center;
     margin-top: 24px;
     margin-bottom: 100px;
+    @include media(md) {
+      font-size: 18px;
+    }
     &::after {
       content: "";
       position: absolute;

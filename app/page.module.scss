@@ -3,6 +3,9 @@
 .fv {
   position: relative;
   margin-top: 89px;
+  @include media(md) {
+    margin-top: 69px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -117,7 +120,7 @@
     background-color: #fff;
     padding: 70px;
     margin: 0 auto 80px;
-    width: min(92%, 800px);
+    width: min(80%, 800px);
     @include media(md) {
       padding: 20px;
     }
